@@ -17,6 +17,7 @@
 .nav-option {
     color: white;
     height: 100%;
+    transition: 0.5s ease;
 }
 
 /* DESKTOP VERSION */
@@ -112,6 +113,7 @@
     .nav-option.clicked {
         background-color: #FFEAC2;
         color: #1C2826;
+        transition: 0.5s ease;
     }
     .move-down {
         width: 25%;
