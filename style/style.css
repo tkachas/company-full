@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
 
 *{
@@ -17,6 +24,8 @@
 .nav-option {
     color: white;
     height: 100%;
+    -webkit-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
     transition: 0.5s ease;
 }
 
@@ -24,18 +33,31 @@
 @media screen and (min-width: 1200px) {
 
     .navbar {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         background: #1C2826;
         height: 75px;
-        align-items: center;
-        justify-content: space-around;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
     }
     .nav-option {
         font-size: xx-large;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         width: 25%;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-transition: 0.5s ease;
+        -o-transition: 0.5s ease;
         transition: 0.5s ease;
     }
     .nav-option.clicked {
@@ -48,13 +70,21 @@
         height:0;
         background: #FFEAC2;
         position: absolute;
+        -webkit-transition: 0.3s ease;
+        -o-transition: 0.3s ease;
         transition: 0.3s ease;
         top: 75px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
     #nav-text {
         opacity: 0;
+        -webkit-transition: 0.2s;
+        -o-transition: 0.2s;
         transition: 0.2s;
         list-style-type: none;
         font-size: x-large;
@@ -65,11 +95,22 @@
         text-align: center;
         height: 0;
         width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         cursor: pointer;
+        -webkit-transition: 0.4s ease;
+        -o-transition: 0.4s ease;
         transition: 0.4s ease;
     }
     ul#nav-text li:hover {
@@ -96,23 +137,38 @@
 
     .navbar {
         background: #1C2826;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         height: 50px;
-        justify-content: space-around;
-        align-items: center;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
 
     .nav-option {
         font-size: large;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         width:25%;
+        -webkit-transition: 0.5s ease;
+        -o-transition: 0.5s ease;
         transition: 0.5s ease;
     }
     .nav-option.clicked {
         background-color: #FFEAC2;
         color: #1C2826;
+        -webkit-transition: 0.5s ease;
+        -o-transition: 0.5s ease;
         transition: 0.5s ease;
     }
     .move-down {
@@ -120,16 +176,24 @@
         height:0;
         background: #FFEAC2;
         position: absolute;
+        -webkit-transition: 0.3s ease;
+        -o-transition: 0.3s ease;
         transition: 0.3s ease;
         top: 50px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
     #nav-text {
         opacity: 0;
+        -webkit-transition: 0.2s;
+        -o-transition: 0.2s;
         transition: 0.2s;
         list-style-type: none;
-        font-size: x-large;
+        font-size: large;
         height: 100%;
         width: 100%;
     }
@@ -137,11 +201,22 @@
         text-align: center;
         height: 0;
         width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         cursor: pointer;
+        -webkit-transition: 0.4s ease;
+        -o-transition: 0.4s ease;
         transition: 0.4s ease;
     }
     ul#nav-text li:hover {
