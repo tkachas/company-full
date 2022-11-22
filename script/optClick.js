@@ -14,6 +14,7 @@ let conLi = document.querySelectorAll('#contact');
 
 let li_bars = [comLi, teamLi, serLi, conLi];
 
+let picture = document.querySelector('.bg-picture');
 // for (let i=0; i<li_bars.length;i++) {
 //     for (let j=0; j<li_bars[i].length; j++) {
 //         li_bars[i][j].style.height = '50' + 'px';
@@ -65,6 +66,7 @@ for (let i = 0; i < optionMenu.length; i++) {
         navText[i].style.opacity = 1;
     }
     optionMenu[i].addEventListener('mouseout', optLeave);
+    picture.addEventListener('click', optLeave);
 
     function optLeave() {
         for (let j=0; j<li_bars[i].length; j++) {
