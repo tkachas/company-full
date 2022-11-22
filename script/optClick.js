@@ -1,4 +1,5 @@
-let option = document.querySelectorAll('.nav-option');
+"use strict";
+let optionMenu = document.querySelectorAll('.nav-option');
 let moveDown = document.querySelectorAll('.move-down');
 let companyText = document.querySelector('.company-options');
 let teamText = document.querySelector('.team-options');
@@ -38,8 +39,8 @@ for (let i = 0; i < moveDown.length; i++) {
 
 
 
-for (let i = 0; i < option.length; i++) {
-    option[i].addEventListener('mouseover', optClick);
+for (let i = 0; i < optionMenu.length; i++) {
+    optionMenu[i].addEventListener('mouseover', optClick);
     
     function optClick() {
         for (let j=0; j<li_bars[i].length; j++) {
@@ -47,7 +48,7 @@ for (let i = 0; i < option.length; i++) {
         // li_bars[i][j].style.height = (100 / li_bars[i].length) + '%';
         }
         moveDown[i].addEventListener('mouseover', () => {
-            option[i].classList.add('clicked');
+            optionMenu[i].classList.add('clicked');
             moveDown[i].style.height = (li_bars[i].length * 50) + 'px';
             // moveDown[i].style.height = 300 + 'px';
             navText[i].style.opacity = 1;
@@ -56,15 +57,14 @@ for (let i = 0; i < option.length; i++) {
             // li_bars[i][j].style.height = (100 / li_bars[i].length) + '%';
             }
         });
-
-        option[i].classList.add('clicked');
+        optionMenu[i].classList.add('clicked');
 
         moveDown[i].style.height = (li_bars[i].length * 50) + 'px';
         // moveDown[i].style.height = 300 + 'px';
 
         navText[i].style.opacity = 1;
     }
-    option[i].addEventListener('mouseout', optLeave);
+    optionMenu[i].addEventListener('mouseout', optLeave);
 
     function optLeave() {
         for (let j=0; j<li_bars[i].length; j++) {
@@ -74,14 +74,14 @@ for (let i = 0; i < option.length; i++) {
         moveDown[i].addEventListener('mouseout', () => {
             moveDown[i].style.height = 0 + 'px';
             navText[i].style.opacity = 0;
-            option[i].classList.remove('clicked');
+            optionMenu[i].classList.remove('clicked');
             for (let j=0; j<li_bars[i].length; j++) {
                 li_bars[i][j].style.height = '0' + 'px';
             // li_bars[i][j].style.height = (100 / li_bars[i].length) + '%';
             }
         });
 
-        option[i].classList.remove('clicked');
+        optionMenu[i].classList.remove('clicked');
         moveDown[i].style.height = 0 + 'px';
         navText[i].style.opacity = 0;
     }
