@@ -14,7 +14,7 @@ let conLi = document.querySelectorAll('#contact');
 
 let li_bars = [comLi, teamLi, serLi, conLi];
 
-let picture = document.querySelector('.bg-picture');
+let picture = document.querySelector('.bg');
 // for (let i=0; i<li_bars.length;i++) {
 //     for (let j=0; j<li_bars[i].length; j++) {
 //         li_bars[i][j].style.height = '50' + 'px';
@@ -36,6 +36,27 @@ let picture = document.querySelector('.bg-picture');
 
 for (let i = 0; i < moveDown.length; i++) {
     moveDown[i].style.left = (25*i) + '%';
+    if (moveDown[i].style.left == "0%") {
+        moveDown[i].style.borderBottomRightRadius = "1em";
+            for (let j=0; j<li_bars[i].length; j++) {
+                li_bars[i][li_bars[i].length - 1].style.borderBottomRightRadius = '1em';
+            }
+    }
+    if (moveDown[i].style.left == "25%" || moveDown[i].style.left == "50%") {
+        moveDown[i].style.borderBottomRightRadius = "1em";
+        moveDown[i].style.borderBottomLeftRadius = "1em";
+        for (let j=0; j<li_bars[i].length; j++) {
+            li_bars[i][li_bars[i].length - 1].style.borderBottomRightRadius = '1em';
+            li_bars[i][li_bars[i].length - 1].style.borderBottomLeftRadius = '1em';
+        }
+    }
+    if (moveDown[i].style.left == "75%") {
+        moveDown[i].style.borderBottomLeftRadius = "1em";
+        for (let j=0; j<li_bars[i].length; j++) {
+            li_bars[i][li_bars[i].length - 1].style.borderBottomLeftRadius = '1em';
+        }
+        
+    }
 }
 
 
@@ -82,7 +103,6 @@ for (let i = 0; i < optionMenu.length; i++) {
             // li_bars[i][j].style.height = (100 / li_bars[i].length) + '%';
             }
         });
-
         optionMenu[i].classList.remove('clicked');
         moveDown[i].style.height = 0 + 'px';
         navText[i].style.opacity = 0;
